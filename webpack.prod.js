@@ -9,13 +9,10 @@ let config = merge(common, {
     mode: 'production',
     devtool: 'hidden-source-map',
     output: {
-        filename: '[name].[chunkhash].js'
+        filename: '[name].js'
     },
     optimization: {
-        minimize: true,
-        splitChunks: {
-            chunks: 'all'
-        }
+        minimize: false,
     },
     resolve: {
         alias: {
@@ -27,7 +24,6 @@ let config = merge(common, {
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
-        new CompressionWebpackPlugin(),
         new webpack.DefinePlugin({
             // Some package detect NODE_ENV to determine which build to use
             'process.env': {

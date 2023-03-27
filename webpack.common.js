@@ -34,7 +34,7 @@ module.exports = {
         }
     ]),
     new ExtractTextWebpackPlugin({
-      filename: '[name].[chunkhash].css',
+      filename: '[name].css',
       disable: process.env.BABEL_ENV !== 'production'
     })
   ],
