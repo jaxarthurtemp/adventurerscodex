@@ -54,7 +54,7 @@ module.exports = {
       { // for loading in images
         test: /\.(png|svg|jpg|gif)$/,
         use: [
-          'file-loader'
+          'url-loader'
         ]
       },
       {
@@ -63,7 +63,7 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file-loader"
+        loader: "url-loader"
       },
     ],
   },
